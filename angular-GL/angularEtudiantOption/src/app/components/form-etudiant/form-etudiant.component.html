@@ -1,0 +1,27 @@
+<main class="container" (ngSubmit)="addEtudiant()">
+    <form class="form" [formGroup]="form" (ngSubmit)="addEtudiant()">
+      <div class="title-form">Formulaire Etudiant</div>
+      <div class="input">
+          <label for="nom">cne :</label>
+          <input formControlName="cne" type="text" name="cne" >
+      </div>
+      <div class="input">
+          <label for="prenom">nom :</label>
+          <input formControlName="nom" type="text" name="nom" >
+      </div>
+      <div class="input">
+          <label for="cne">prenom :</label>
+          <input formControlName="prenom" type="text" name="prenom" >
+      </div>
+      <div class="input">
+          <label for="option">Option :</label>
+          <select name="option" formControlName="option" >
+            <option *ngFor="let op of options" [value]="op.nom">{{op.nom}}</option>
+          </select>
+      </div>
+      <div class="btnCantainer">
+          <button type="submit" class="btn" (click)="addEtudiant()" [disabled] = "!form.valid">Ajouter</button>
+          <button type="reset" class="btn" >Annuler</button>
+      </div>
+    </form>
+    </main>

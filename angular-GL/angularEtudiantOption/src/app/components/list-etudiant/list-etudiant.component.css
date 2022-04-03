@@ -1,0 +1,56 @@
+/*--------------------|Css Table|--------------------*/
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete{
+  cursor: pointer;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(33, 33, 33, 0.15);
+  flex: 2;
+}
+
+
+
+.styled-table thead tr {
+  background-color: #333;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table th:last-child,
+.styled-table td:last-child {
+  text-align: center;
+}
+
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #333;
+}
+
+tbody{
+  overflow-x: hidden;
+}

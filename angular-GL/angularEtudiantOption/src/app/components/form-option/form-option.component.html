@@ -1,0 +1,17 @@
+<main class="container" (ngSubmit)="addOption()">
+    <form class="form" [formGroup]="form">
+        <div class="title-form">Formulaire Option</div>
+        <div class="input">
+            <label for="nom">nom :</label>
+            <input formControlName="nom" type="text" name="nom" id="nom">
+        </div>
+        <div class="input">
+            <label for="description">description :</label>
+            <input formControlName="description" type="text" name="description" id="prenom">
+        </div>
+        <div class="btnCantainer">
+            <button type="submit" class="btn" id="btn" (click)="addOption()" [disabled]="!form.valid">Ajouter</button>
+            <button type="reset" class="btn">Annuler</button>
+        </div>
+    </form>
+</main>

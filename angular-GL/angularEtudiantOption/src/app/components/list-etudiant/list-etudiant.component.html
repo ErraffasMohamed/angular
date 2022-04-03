@@ -1,0 +1,24 @@
+<main class="container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Cne</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Option</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let etud of etudiants">
+      <tr>
+        <td>{{etud.cne}}</td>
+        <td>{{etud.nom}}</td>
+        <td>{{etud.prenom}}</td>
+        <td>{{etud.option.nom}}</td>
+        <td class="delete"><button (click)="onDeleteEtudiant(etud.cne)"><i
+              class="fa-solid fa-user-minus"></i>delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

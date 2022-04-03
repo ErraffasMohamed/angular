@@ -1,0 +1,18 @@
+<main class="container">
+    <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let op of options">
+            <tr>
+                <td>{{op.nom}}</td>
+                <td>{{op.description}}</td>
+                <td class="delete" (click)="onDeleteOption(op.nom)"><i class="fa-solid fa-user-xmark"></i></td>
+            </tr>
+        </tbody>
+    </table>
+  </main>
